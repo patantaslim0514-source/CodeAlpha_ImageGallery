@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful, responsive image gallery">
+    <title>Image Gallery | CodeAlpha</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <span class="logo-icon">✦</span>
+                Pixora
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <a href="#gallery" class="header-btn">Explore Gallery ↗</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <span class="hero-tag">✦ YOUR WORLD IN PICTURES</span>
+
+                <h1>
+                    Every picture<br>
+                    tells a <span>story.</span>
+                </h1>
+
+                <p>
+                    Explore beautiful moments, breathtaking places,
+                    and extraordinary views in one collection.
+                </p>
+
+                <a href="#gallery" class="primary-btn">
+                    Explore Collection <span>→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-tag">OUR COLLECTION</span>
+                        <h2>Discover the beauty</h2>
+                        <p>Explore our handpicked collection of photographs.</p>
+                    </div>
+
+                    <span class="photo-count" id="photoCount">
+                        12 Photos
+                    </span>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="filter-buttons" aria-label="Filter images">
+                    <button class="filter-btn active" data-filter="all">
+                        All Photos
+                    </button>
+                    <button class="filter-btn" data-filter="nature">
+                        Nature
+                    </button>
+                    <button class="filter-btn" data-filter="animals">
+                        Animals
+                    </button>
+                    <button class="filter-btn" data-filter="architecture">
+                        Architecture
+                    </button>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="gallery-grid" id="galleryGrid">
+
+                    <article class="gallery-item" data-category="nature">
+                        <button class="image-button" type="button" aria-label="View mountain landscape">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=85"
+                                 alt="Beautiful mountain landscape" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Mountain Escape</h3>
+                                <p>Nature</p>
+                            </div>
+                            <span class="image-number">01</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="nature">
+                        <button class="image-button" type="button" aria-label="View forest">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=85"
+                                 alt="Green forest with tall trees" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Silent Forest</h3>
+                                <p>Nature</p>
+                            </div>
+                            <span class="image-number">02</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="animals">
+                        <button class="image-button" type="button" aria-label="View lion">
+                            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&q=85"
+                                 alt="Lion in the wild" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>King of the Wild</h3>
+                                <p>Animals</p>
+                            </div>
+                            <span class="image-number">03</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="architecture">
+                        <button class="image-button" type="button" aria-label="View modern architecture">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=85"
+                                 alt="Modern white architectural building" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Modern Lines</h3>
+                                <p>Architecture</p>
+                            </div>
+                            <span class="image-number">04</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="nature">
+                        <button class="image-button" type="button" aria-label="View ocean">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=85"
+                                 alt="Blue ocean and sandy beach" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Ocean Dreams</h3>
+                                <p>Nature</p>
+                            </div>
+                            <span class="image-number">05</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="animals">
+                        <button class="image-button" type="button" aria-label="View elephant">
+                            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=800&q=85"
+                                 alt="Elephant in natural surroundings" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Gentle Giant</h3>
+                                <p>Animals</p>
+                            </div>
+                            <span class="image-number">06</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="nature">
+                        <button class="image-button" type="button" aria-label="View sunset">
+                            <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=85"
+                                 alt="Golden sunset over a green landscape" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Golden Hour</h3>
+                                <p>Nature</p>
+                            </div>
+                            <span class="image-number">07</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="architecture">
+                        <button class="image-button" type="button" aria-label="View city buildings">
+                            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=85"
+                                 alt="Contemporary architectural building" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>City Geometry</h3>
+                                <p>Architecture</p>
+                            </div>
+                            <span class="image-number">08</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="animals">
+                        <button class="image-button" type="button" aria-label="View fox">
+                            <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=85"
+                                 alt="Fox in its natural habitat" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Forest Friend</h3>
+                                <p>Animals</p>
+                            </div>
+                            <span class="image-number">09</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="nature">
+                        <button class="image-button" type="button" aria-label="View waterfall">
+                            <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=85"
+                                 alt="Waterfall surrounded by nature" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Hidden Falls</h3>
+                                <p>Nature</p>
+                            </div>
+                            <span class="image-number">10</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="architecture">
+                        <button class="image-button" type="button" aria-label="View building">
+                            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=85"
+                                 alt="Geometric building design" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Urban Perspective</h3>
+                                <p>Architecture</p>
+                            </div>
+                            <span class="image-number">11</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="nature">
+                        <button class="image-button" type="button" aria-label="View mountain lake">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&q=85"
+                                 alt="Peaceful lake surrounded by mountains" loading="lazy">
+                            <span class="image-overlay">
+                                <span class="zoom-icon">↗</span>
+                            </span>
+                        </button>
+                        <div class="image-info">
+                            <div>
+                                <h3>Peaceful Lake</h3>
+                                <p>Nature</p>
+                            </div>
+                            <span class="image-number">12</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container about-content">
+                <span class="section-tag">ABOUT THIS PROJECT</span>
+                <h2>A little space for beautiful moments.</h2>
+                <p>
+                    Pixora is a responsive image gallery built with
+                    HTML, CSS and JavaScript. Explore photographs,
+                    discover categories and enjoy every detail.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeLightbox"
+                type="button" aria-label="Close image viewer">×</button>
+
+        <button class="lightbox-prev" id="prevImage"
+                type="button" aria-label="Previous image">❮</button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxCategory"></p>
+            </div>
+        </div>
+
+        <button class="lightbox-next" id="nextImage"
+                type="button" aria-label="Next image">❯</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">
+                <span class="logo-icon">✦</span>
+                Pixora
+            </a>
+            <p>Created with HTML, CSS & JavaScript | CodeAlpha</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
